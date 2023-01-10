@@ -19,7 +19,7 @@ public class ReadAlignmentQualDistribution {
             alignmentReader.setFilterFlags(filterFlags);
             //alignmentReader.setMinMQ(0);
             Iterator<ReadAlignment> it = alignmentReader.iterator();
-            byte[] qualityDistribution = new byte[257];
+            int[] qualityDistribution = new int[257];
             while(it.hasNext()){
                 ReadAlignment aln = it.next();
                 int quality = aln.getAlignmentQuality();
